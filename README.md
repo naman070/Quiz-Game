@@ -8,3 +8,15 @@ Each line in `quiz.csv` contains a question and its answer, separated by a comma
 ## 🚀 How to Run
 ```bash
 go run main.go
+```
+
+You can also limit the number of questions:
+```bash
+go run main.go 5
+```
+
+🧩 Features
+
+- Reads questions and answers from a CSV file
+- Randomizes question order
+- Tracks score and shows incorrect answers
