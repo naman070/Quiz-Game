@@ -7,12 +7,30 @@ Each line in `quiz.csv` contains a question and its answer, separated by a comma
 
 ## 🚀 How to Run
 ```bash
-go run main.go
+go build main.go
+./main
 ```
 
-You can also limit the number of questions:
+## Shell arguments
+After building the go files
 ```bash
-go run main.go 5
+./main --help
+```
+This will show all the shell parameters supported:
+```bash
+  -csv string
+        A CSV File in the format of 'questions,answer' (default "quiz.csv")
+  -limit int
+        Time limit for the quiz in seconds (default 30)
+  -n int
+        Max Number of questions in Quiz (default 20)
+```
+
+Different ways to run the code
+```bash
+go run main.go
+go run main.go -csv="quiz.csv" -n=3 -limit=10
+./main -csv="quiz.csv" -n=3 -limit=10
 ```
 
 🧩 Features
@@ -20,3 +38,4 @@ go run main.go 5
 - Reads questions and answers from a CSV file
 - Randomizes question order
 - Tracks score and shows incorrect answers
+- Once the timer expires, quiz will terminate showing the final score.
